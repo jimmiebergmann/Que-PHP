@@ -2,6 +2,7 @@
 
 require_once("../src/Que.php");
 
+
 ProducerTest();
 
 /*
@@ -63,18 +64,20 @@ function ProducerTest()
 	{
 		$message = "Hello world!";
 		$timeout = 3;
-
-		echo "Push message: " . $message . "\n";
 		$response = $que->Push($message, $timeout);
 
 		if(is_string($response) == false)
 		{
-			echo "No consumer pulled message.\n";
-			continue;
+			echo "-----------------------------\n";
+			break;
 		}
 
-		echo "Consumer acked: " . $response . "\n";
+		echo "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW\n";
+
+
 	}
+
+	echo "Disconnected.\n";
 }
 
 
